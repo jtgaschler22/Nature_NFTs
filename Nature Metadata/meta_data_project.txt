@@ -1,0 +1,5 @@
+{
+  "description": "Collection of photos of Nature", 
+  "image": "https://example.com/image.png", 
+  "name": "Fintech Nature Photos"
+}
