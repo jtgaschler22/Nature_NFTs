@@ -1,1 +1,1 @@
-# Practice_3_NFT
+# Project 3
