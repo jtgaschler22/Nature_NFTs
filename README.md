@@ -16,7 +16,7 @@ In addition to these template 721/1155 contracts, we provide sample factory cont
 
 ### Node version
 
-Either make sure you're running a version of node compliant with the `engines` requirement in `package.json`, or install Node Version Manager (https://github.com/creationix/nvm)(Mac/Linux), (https://github.com/coreybutler/nvm-windows)(Windows), and run `nvm use` to use the correct version of node. 
+Either make sure you're running a version of node compliant with the `engines` requirement in `package.json`, or install Node Version Manager (https://github.com/creationix/nvm) (Mac/Linux), (https://github.com/coreybutler/nvm-windows) (Windows), and run `nvm use` to use the correct version of node. 
 
 In this case, the command will be:
 
