@@ -103,7 +103,9 @@ node scripts/mint.js
 
 ***By default, the mint script will mint 15 tokens, as we have 15 photos worth of metadata in our Nature Metadata folder. If you wish to change how many tokens you are minting, you will need to edit the variable 'NUM_CREATURES' in scripts/mint.js to be the number of tokens you desire to mint.***
 
+### Re-deploying updated contracts.
 
+We ran into the issue that we could not re-deploy contracts after we had updated them locally. If you wish to re-deploy, you must delete all of the files found in build/contracts. The end result when viewing newly minted tokens will be a V2, V3, etc. when viewing the contracts on etherscan, or Opensea's marketplace. If you wish to re-deploy without having the version number after the contracts, you must create a new Alchemy or Infura project, and update your .env with the new project ID.
 
 ### Diagnosing Common Issues  
 
@@ -125,7 +127,8 @@ If you're running a modified version of `sell.js` and not getting expected behav
 
 - Are you running a version of node compliant with the `engines` requirement in `package.json`? If no, try `nvm use; rm -rf node_modules; yarn`
 
-# About OpenSea Creature Accessories
+# About OpenSea Creature Accessories  
+***Disclaimer: Our NFTs are ERC721, we did not utilise the ERC-1155 contracts provided by Opensea.**  
 
 This is a sample ERC-1155 contract for the purposes of demonstrating integration with the [OpenSea](https://opensea.io) marketplace for crypto collectibles. We also include:
 
