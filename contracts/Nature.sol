@@ -14,10 +14,10 @@ contract Nature is ERC721Tradable {
     {}
 
     function baseTokenURI() public pure returns (string memory) {
-        return "https://raw.githubusercontent.com/crcrawfo1/NFT_test/main/";
+        return "https://raw.githubusercontent.com/jtgaschler22/Project_3_NFT/main/Nature%20Metadata/";
     }
 
     function contractURI() public pure returns (string memory) {
-        return "https://raw.githubusercontent.com/crcrawfo1/NFT_test/main/meta_data_project.txt";
+        return "https://raw.githubusercontent.com/jtgaschler22/Project_3_NFT/main/Nature%20Metadata/meta_data_project.txt";
     }
 }
