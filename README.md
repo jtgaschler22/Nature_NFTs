@@ -16,13 +16,22 @@ In addition to these template 721/1155 contracts, we provide sample factory cont
 
 ### Node version
 
-Either make sure you're running a version of node compliant with the `engines` requirement in `package.json`, or install Node Version Manager [`nvm`](https://github.com/creationix/nvm) and run `nvm use` to use the correct version of node.
+Either make sure you're running a version of node compliant with the `engines` requirement in `package.json`, or install Node Version Manager (https://github.com/creationix/nvm)(Mac/Linux), (https://github.com/coreybutler/nvm-windows)(Windows), and run `nvm use` to use the correct version of node. 
+
+In this case, the command will be:
+
+```bash
+nvm install 12.18.0
+nvm use 12.18.0
+```
 
 ## Installation
 
 Run
 
 ```bash
+npm install -g yarn
+yarn set version 1.22.4
 yarn
 ```
 
