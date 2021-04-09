@@ -6,6 +6,10 @@
 
 ### About this Project
 
+We set out to follow the Opensea erc 721 tutorial (https://docs.opensea.io/docs/getting-started) in order to mint and list several NFT's on the Opensea marketplace. In the end, we ended up using the pre-made contracts that the Opensea tutorial provided by editing them to mint tokens with the off-chain metadata that can be found in the Nature Metadata folder within this repository.
+
+The resulting marketplace can be found at the following link. At the time of writing, we minted 15 photos all taken by members of our group, and listed them for sale on the Rinkeby testnet. If we so-desired, we could easily migrate these NFTs to the Ethereum main-net, however, as this project is proof of concept, we decided not to do that.
+
 https://testnets.opensea.io/accounts/0x26a9d5bc3f91502957201015ace9db7c13b4cffd/fintech-nature-photos-uj6bxg1rkj
 
 What's included:
@@ -26,7 +30,7 @@ In addition to these template 721/1155 contracts, we provide sample factory cont
 
 Either make sure you're running a version of node compliant with the `engines` requirement in `package.json`, or install Node Version Manager (https://github.com/creationix/nvm) (Mac/Linux), (https://github.com/coreybutler/nvm-windows) (Windows), and run `nvm use` to use the correct version of node. 
 
-In this case, the command will be:
+In this case, after installing Node Version Manager, the command will be:
 
 ```bash
 nvm install 12.18.0
@@ -44,6 +48,7 @@ yarn
 ```
 
 If you run into an error while building the dependencies and you're on a Mac, run the code below, remove your `node_modules` folder, and do a fresh `yarn install`:
+***Disclaimer: This instruction is provided by opensea, we did not test to determine its efficacy***
 
 ```bash
 xcode-select --install # Install Command Line Tools if you haven't already.
@@ -52,6 +57,23 @@ sudo npm explore npm -g -- npm install node-gyp@latest # Update node-gyp
 ```
 
 ## Deploying
+
+### (Optional) Creating a .env file
+1. Within the main folder of this repository, you should create a .env file with the following fields to be filled out later (***Do not copy the portions in parenthesis***):
+
+export INFURA_KEY="" (can also be an Alchemy key, if you want to change it, change INFURA_KEY to be ALCHEMY_KEY)
+export MNEMONIC="" (the mnemonic of the wallet you would like to charge the deployment's gas fees to)
+export OWNER_ADDRESS="" (the person you would like to have own the NFT's you will be minting later)
+export NFT_CONTRACT_ADDRESS="" (addressed in the Deploying to the Rinkeby network step)
+export FACTORY_CONTRACT_ADDRESS="" (addressed in the Deploying to the Rinkeby network step)
+export NETWORK="rinkeby" (pre-filled for deploying to rinkeby testnet)
+
+2. As you follow the remainder of this tutorial, rather than running the export commands, you can fill out the relevant env fields, and once you have the .env completed, rather than re-typing out each export, instead you can run:
+
+```
+. .env
+```
+This will make re-deployments and resuming work much simpler.
 
 ### Deploying to the Rinkeby network.
 
@@ -65,6 +87,8 @@ export MNEMONIC="<metmask_mnemonic>"
 DEPLOY_CREATURES_SALE=1 yarn truffle deploy --network rinkeby
 ```
 
+3. At this point, your terminal will provide you information about your deployed contracts. I recommend saving this information in a text file for reference later. Additionally, if you are creating a .env file, make sure to copy your NFT_CONTRACT_ADDRESS (in our case called Nature) and your FACTORY_CONTRACT_ADDRESS (in our case Nature_Factory) into your .env file. At this point your .env file should be complete, so make sure to run the . .env command.
+
 ### Minting tokens.
 
 After deploying to the Rinkeby network, there will be a contract on Rinkeby that will be viewable on [Rinkeby Etherscan](https://rinkeby.etherscan.io). For example, here is a [recently deployed contract](https://rinkeby.etherscan.io/address/0xeba05c5521a3b81e23d15ae9b2d07524bc453561). You should set this contract address and the address of your Metamask account as environment variables when running the minting script. If a [CreatureFactory was deployed](https://github.com/ProjectOpenSea/opensea-creatures/blob/master/migrations/2_deploy_contracts.js#L38), which the sample deploy steps above do, you'll need to specify its address below as it will be the owner on the NFT contract, and only it will have mint permissions. In that case, you won't need NFT_CONTRACT_ADDRESS, as all we need is the contract with mint permissions here.
@@ -77,9 +101,11 @@ export NETWORK="rinkeby"
 node scripts/mint.js
 ```
 
-By default, the mint script will mint 15 tokens, as we have 15 photos worth of metadata in our Nature Metadata folder. If you wish to change how many tokens you are minting, you will need to edit the variable 'NUM_CREATURES' in scripts/mint.js to be the number of tokens you desire to mint.
+***By default, the mint script will mint 15 tokens, as we have 15 photos worth of metadata in our Nature Metadata folder. If you wish to change how many tokens you are minting, you will need to edit the variable 'NUM_CREATURES' in scripts/mint.js to be the number of tokens you desire to mint.***
 
-### Diagnosing Common Issues
+
+
+### Diagnosing Common Issues ***Disclaimer: These are provided by Opensea, we ended up using some of them, but have not verified all fixes listed below.***
 
 If you're running a modified version of `sell.js` and not getting expected behavior, check the following:
 
