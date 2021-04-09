@@ -107,6 +107,24 @@ node scripts/mint.js
 
 We ran into the issue that we could not re-deploy contracts after we had updated them locally. If you wish to re-deploy, you must delete all of the files found in build/contracts. The end result when viewing newly minted tokens will be a V2, V3, etc. when viewing the contracts on etherscan, or Opensea's marketplace. If you wish to re-deploy without having the version number after the contracts, you must create a new Alchemy or Infura project, and update your .env with the new project ID.
 
+### Editing metadata.  
+
+Opensea provides good information about updating the metadata in order to update these tokens for your individual needs. (https://docs.opensea.io/docs/metadata-standards)
+
+You will find in our Nature.sol file that we use the baseTokenURI function in order to return metadata for each token, which links to the Nature Metadata folder found in this repository. Opensea's contracts concatenate whatever link the baseTokenURI function returns with the token number in order to return individualized off-chain metadata links for each token. For our purposes, we hosted json files on GitHub that contained metadata for the 15 tokens we minted. If you plan to mint more tokens, it might be pertinent to design a more sophisticated api, however for our purposes, this solution proved sufficient.
+
+Ex:
+```
+    function baseTokenURI() public pure returns (string memory) {
+        return "https://raw.githubusercontent.com/jtgaschler22/Project_3_NFT/main/Nature%20Metadata/";
+    }
+```
+will return:  
+  
+https://raw.githubusercontent.com/jtgaschler22/Project_3_NFT/main/Nature%20Metadata/1  
+  
+For the first token, with the 1 at the end changing to whatever number token is being minted.  
+
 ### Diagnosing Common Issues  
 
 ***Disclaimer: These are provided by Opensea, we ended up using some of them, but have not verified all fixes listed below.***  
