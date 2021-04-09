@@ -1,7 +1,12 @@
 ## Nature NFTs (Heavily based on opensea-creatures https://github.com/ProjectOpenSea/opensea-creatures)
 - Coded by Connor Crawford, John Gaschler, Francois-M Brych, Henna Singh, Meagan Rathjen, and Oguzhan Acil
 
+### Disclaimer:
 **As mentioned above, this project is based heavily on the opensea-creatures repository. Most of the code found within this project is either a direct copy, or a copy which we then edited in order to have it to serve our purposes. This readme file is also copied, and then edited in order to have it specifically apply to the code found within this repository.**
+
+### About this Project
+
+https://testnets.opensea.io/accounts/0x26a9d5bc3f91502957201015ace9db7c13b4cffd/fintech-nature-photos-uj6bxg1rkj
 
 What's included:
 
