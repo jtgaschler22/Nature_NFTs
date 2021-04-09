@@ -1,4 +1,7 @@
-## OpenSea Creatures - Starter ERC721, ERC1155, and factory contracts
+## Nature NFTs (Heavily based on opensea-creatures https://github.com/ProjectOpenSea/opensea-creatures)
+- Coded by Connor Crawford, John Gaschler, Francois-M Brych, Henna Singh, Meagan Rathjen, and Oguzhan Acil
+
+**As mentioned above, this project is based heavily on the opensea-creatures repository. Most of the code found within this project is either a direct copy, or a copy which we then edited in order to have it to serve our purposes. This readme file is also copied, and then edited in order to have it specifically apply to the code found within this repository.**
 
 What's included:
 
@@ -68,6 +71,8 @@ export FACTORY_CONTRACT_ADDRESS="<deployed_factory_contract_address>"
 export NETWORK="rinkeby"
 node scripts/mint.js
 ```
+
+By default, the mint script will mint 15 tokens, as we have 15 photos worth of metadata in our Nature Metadata folder. If you wish to change how many tokens you are minting, you will need to edit the variable 'NUM_CREATURES' in scripts/mint.js to be the number of tokens you desire to mint.
 
 ### Diagnosing Common Issues
 
