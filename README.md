@@ -61,12 +61,12 @@ sudo npm explore npm -g -- npm install node-gyp@latest # Update node-gyp
 ### (Optional) Creating a .env file
 1. Within the main folder of this repository, you should create a .env file with the following fields to be filled out later (***Do not copy the portions in parenthesis***):
 
-export INFURA_KEY="" (can also be an Alchemy key, if you want to change it, change INFURA_KEY to be ALCHEMY_KEY)
-export MNEMONIC="" (the mnemonic of the wallet you would like to charge the deployment's gas fees to)
-export OWNER_ADDRESS="" (the person you would like to have own the NFT's you will be minting later)
-export NFT_CONTRACT_ADDRESS="" (addressed in the Deploying to the Rinkeby network step)
-export FACTORY_CONTRACT_ADDRESS="" (addressed in the Deploying to the Rinkeby network step)
-export NETWORK="rinkeby" (pre-filled for deploying to rinkeby testnet)
+export INFURA_KEY="" (can also be an Alchemy key, if you want to change it, change INFURA_KEY to be ALCHEMY_KEY)  
+export MNEMONIC="" (the mnemonic of the wallet you would like to charge the deployment's gas fees to)  
+export OWNER_ADDRESS="" (the person you would like to have own the NFT's you will be minting later)  
+export NFT_CONTRACT_ADDRESS="" (addressed in the Deploying to the Rinkeby network step)  
+export FACTORY_CONTRACT_ADDRESS="" (addressed in the Deploying to the Rinkeby network step)  
+export NETWORK="rinkeby" (pre-filled for deploying to rinkeby testnet)  
 
 2. As you follow the remainder of this tutorial, rather than running the export commands, you can fill out the relevant env fields, and once you have the .env completed, rather than re-typing out each export, instead you can run:
 
@@ -105,7 +105,9 @@ node scripts/mint.js
 
 
 
-### Diagnosing Common Issues ***Disclaimer: These are provided by Opensea, we ended up using some of them, but have not verified all fixes listed below.***
+### Diagnosing Common Issues  
+
+***Disclaimer: These are provided by Opensea, we ended up using some of them, but have not verified all fixes listed below.***  
 
 If you're running a modified version of `sell.js` and not getting expected behavior, check the following:
 
