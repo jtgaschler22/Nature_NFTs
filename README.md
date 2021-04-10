@@ -145,30 +145,7 @@ If you're running a modified version of `sell.js` and not getting expected behav
 
 - Are you running a version of node compliant with the `engines` requirement in `package.json`? If no, try `nvm use; rm -rf node_modules; yarn`
 
-# About OpenSea Creature Accessories  
-***Disclaimer: Our NFTs are ERC721, we did not utilise the ERC-1155 contracts provided by Opensea.**  
-
-This is a sample ERC-1155 contract for the purposes of demonstrating integration with the [OpenSea](https://opensea.io) marketplace for crypto collectibles. We also include:
-
-- A factory contract for making sell orders for unminted items (allowing for **gas-free and mint-free presales**).
-- A configurable lootbox contract for selling randomized collections of ERC-1155 items.
-
-On top of the features from the OpenSea ERC721 sample contracts above, ERC1155
-
-- supports multiple creators per contract, where only the creator is able to mint more copies
-- supports pre-minted items for the lootbox to choose from
-
-## Configuring the Lootbox
-
-Open CreatureAccessoryLootbox.sol
-
-1. Change `Class` to reflect your rarity levels.
-2. Change `NUM_CLASSES` to reflect how many classes you have (this gets used for sizing fixed-length arrays in Solidity)
-3. In `constructor`, set the `OptionSettings` for each of your classes. To do this, as in the example, call `setOptionSettings` with
-   1. Your option id,
-   2. The number of items to issue when the box is opened,
-   3. An array of probabilities (basis points, so integers out of 10,000) of receiving each class. Should add up to 10k and be descending in value.
-4. Then follow the instructions below to deploy it! Purchases will auto-open the box. If you'd like to make lootboxes tradable by users (without a purchase auto-opening it), contact us at contact@opensea.io (or better yet, in [Discord](https://discord.gg/ga8EJbv)).
+***Disclaimer: Originally, there were instructions here regarding the ERC-1155 contracts that exist within this repository. We did not utilise the ERC-1155 contracts in our version this project, so we've removed these instructions. However, we found that the removal of the actual ERC-1155 contracts broke the deployment scripts, so we decided to leave them in the repository as we did not have time to fully diagnose these issues. In future versions of this project the ERC-1155 contracts will be removed. If you decide to use the ERC-1155 contracts in your projects, OpenSea's repository has further instructions about their implementation found here: https://github.com/ProjectOpenSea/opensea-creatures**  
 
 ## Why are some standard methods overridden?
 
