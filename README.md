@@ -8,9 +8,9 @@
 
 We set out to follow the Opensea erc 721 tutorial (https://docs.opensea.io/docs/getting-started) in order to mint and list several NFT's on the Opensea marketplace. In the end, we ended up using the pre-made contracts that the Opensea tutorial provided by editing them to mint tokens with the off-chain metadata that can be found in the Nature Metadata folder within this repository.
 
-The resulting marketplace can be found at the following link. At the time of writing, we minted 15 photos all taken by members of our group, and listed them for sale on the Rinkeby testnet. If we so-desired, we could easily migrate these NFTs to the Ethereum main-net, however, as this project is proof of concept, we decided not to do that.
+The resulting marketplace can be found at the following link: https://testnets.opensea.io/accounts/0x26a9d5bc3f91502957201015ace9db7c13b4cffd/fintech-nature-photos-uj6bxg1rkj  
 
-https://testnets.opensea.io/accounts/0x26a9d5bc3f91502957201015ace9db7c13b4cffd/fintech-nature-photos-uj6bxg1rkj
+At the time of writing, we minted 15 photos all taken by members of our group, and listed them for sale on the Rinkeby testnet. If we so-desired, we could easily migrate these NFTs to the Ethereum main-net, however, as this project is proof of concept, we decided not to do that.
 
 What's included:
 
