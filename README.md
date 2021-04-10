@@ -248,5 +248,6 @@ Once Ganache has started, run the following in another terminal window:
 
 # Sources: 
 https://docs.opensea.io/docs/opensea-initial-item-sale-tutorial
+
 https://github.com/creationix/nvm
 https://github.com/ProjectOpenSea/opensea-creatures/blob/master/migrations/2_deploy_contracts.js#L38
